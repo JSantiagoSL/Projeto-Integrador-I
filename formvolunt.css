@@ -1,0 +1,83 @@
+body {
+    background-color: lightblue;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header {
+    background-color: rgb(108, 142, 244);
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+.bothome {
+    margin-top: 2px;
+    margin-left: 2px;
+}
+.box-descr {
+    color: white;
+    background-color: rgb(108, 142, 244);
+    border: 1px solid rgb(108, 142, 244);
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    margin-top: 30px;
+}
+.tit1 {
+    background-color: rgb(108, 142, 244);
+    color: white;
+    font-weight: bold;
+    height: fit-content;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.dados {
+    border: 1px;
+    background-color:lightblue ;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width: fit-content;
+}
+.box-nome {
+    background-color: white;
+    height: fit-content;
+    width: fit-content; 
+}
+.box-email {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;  
+}
+.box-end {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+}
+.box-tel {
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+}
+input.nome {
+    width: 344px;
+    border: 0px;
+}
+input.email {
+    width: 345px;
+    border: 0px;
+}
+input.endereco {
+    width: 319px;
+    border: 0px;
+}
+input.telefone {
+    width: 326px;
+    border: 0px;
+}
+#enviar {
+    background-color: white;
+}
