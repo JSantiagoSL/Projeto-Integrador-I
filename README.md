@@ -65,6 +65,6 @@ Lista as tecnologias, frameworks e bibliotecas utilizados.
 | POST | api/entidade2 |
 
 ## Documentação
-* [Documento de visão do projeto](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/documento_visao.docx)
+* [Documento de visão do projeto](https://github.com/JSantiagoSL/Projeto-Integrador-I/blob/main/docs/Documento de Visão - Projeto Adocao.doc-1.docx)
 * [Regras gerais da disciplina](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/regras_gerais.pdf)
 * [Apresentação do Projeto] - Vídeo a ser criado
