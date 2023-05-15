@@ -62,6 +62,19 @@ body{
     color: white;
     margin: 10px 0;
 }
+.card-footer button {
+    background-color: rgb(64, 64, 125);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.card-footer button a {
+    color: white;
+    text-decoration: none;
+    
+}
 .card-footer a{
     text-align: center;
     font-size: 12px;
