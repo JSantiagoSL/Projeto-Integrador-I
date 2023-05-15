@@ -1,7 +1,7 @@
 
 .cabecario{
     box-sizing: content-box;
-    width: 1232px;
+    width: 95.8%;
     height: 10px;
     top: 0px; /*move para cima e para baixo*/
     left: 0px;/* move para o lado*/
@@ -9,6 +9,7 @@
     margin:0px;
     position:absolute;
     background-color: #7CC0FF;
+    justify-content: left;
 }
 #container_filtros{
     box-sizing: content-box;
@@ -35,12 +36,11 @@ form{
     font-size:large;
     font-family:serif;
 }
-.voltar{
+.voltar {
     box-sizing: content-box;
-    width: 40px;
+    width: 35px;
     height: 10px;
-    top: 5px;
-    left: 1200px;
+    left: 98%;
     padding: 0px;
     margin: 0px;
     position: relative;
