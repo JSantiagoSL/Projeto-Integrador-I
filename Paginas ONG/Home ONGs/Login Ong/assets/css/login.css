@@ -3,7 +3,7 @@ body{
     margin: 0;
     background-color: #7BC8FF;
 }
-#login{
+.login{
     display: flex;
     align-items: center;
     justify-content: center;
