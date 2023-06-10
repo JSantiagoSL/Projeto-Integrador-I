@@ -49,10 +49,13 @@ body {
     padding: 0.2rem 0.5rem;
     border: none;
     border-radius: 5px;
+    background-color: rgb(42, 93, 248);
+}
+.corpo button a {
     color: white;
     font-size: large;
-    font-weight: 500;
-    background-color: rgb(42, 93, 248);
+    font-weight: 200;
+    text-decoration: none;
 }
 .animais-slv {
     display: flex;
