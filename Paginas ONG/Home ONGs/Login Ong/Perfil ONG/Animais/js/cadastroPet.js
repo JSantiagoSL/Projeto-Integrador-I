@@ -58,5 +58,4 @@ class Animal {
   
     const animal = new Animal(nome, especie, idade);
   
-    // Enviar os dados do animal para o servidor (PHP) para salvar
   }; 
