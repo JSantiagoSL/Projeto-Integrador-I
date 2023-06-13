@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Pet</title>
+    <link rel="stylesheet" href="assets/css/style_pet.css">
+</head>
+<body>
+    <center>
+        <div class="box-animal">
+            <aside class="lado-esq">
+                <label for="foto">Foto do pet</label>
+                <input type="file" id="foto" value="Foto"><br>
+                <label for="salvar"></label>
+                <input type="submit" id="salvar" value="Salvar"></aside>
+            <div class="lado-dir">
+                <label for="nome-pet">Nome:</label>
+                <input type="text" name="nome-pet" id="nome-pet" placeholder="Nome do animal">
+                <div class="sexo-pet">
+                    <label for="sex-pet">Sexo:</label>
+                    <input type="radio" name="sex-pet" id="macho">M
+                    <input type="radio" name="sex-pet" id="femea">F
+                </div>
+                <label for="def">Deficiência</label>
+                <input type="text" name="def" id="def" placeholder="Se sim, qual?">
+                <label for="desc-pet">Descrição</label>
+                <input type="text" name="desc-pet" id="desc-pet" placeholder="Descrição do animal(personalidade)">
+                <label for="pelagem">Pelagem</label>
+                <select name="pelagem" id="pelagem">
+                    <option></option>
+                    <option>Curto</option>
+                    <option>Médio</option>
+                    <option>Longo</option>
+                </select>
+                <label for="porte">Porte</label>
+                <select name="porte" id="porte">
+                    <option></option>
+                    <option>Pequeno</option>
+                    <option>Médio</option>
+                    <option>Grande</option>
+                </select>
+                <label for="especie">Espécie</label>
+                <select name="especie" id="especie">
+                    <option></option>
+                    <option>Cachorro</option>
+                    <option>Gato</option>
+                </select>                    
+            </div>
+    </div>
+    </center>
+        
+</body>
+</html>
