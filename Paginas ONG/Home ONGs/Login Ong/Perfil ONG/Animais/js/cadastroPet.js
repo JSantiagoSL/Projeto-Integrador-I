@@ -1,61 +1,62 @@
-// Classe Animal
-class Animal {
-    constructor(especie, sexo, porte, idade, deficiencia, cor, pelagem) {
-      this.especie = especie;
-      this.sexo = sexo;
-      this.porte = porte;
-      this.idade = idade;
-      this.deficiencia = deficiencia;
-      this.cor = cor;
-      this.pelagem = pelagem;
-    }
-  
-    // Método para exibir o animal na tabela
-    exibirNaTabela() {
-      const tableBody = document.querySelector("#animalTable tbody");
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${this.especie}</td>
-        <td>${this.sexo}</td>
-        <td>${this.porte}</td>
-        <td>${this.idade}</td>
-        <td>${this.deficiencia}</td>
-        <td>${this.cor}</td>
-        <td>${this.pelagem}</td>
-        <td>
-          <button class="editarBtn">Editar</button>
-          <button class="excluirBtn">Excluir</button>
-        </td>
-      `;
-      tableBody.appendChild(row);
-  
-      // Adicionar eventos aos botões de editar e excluir
-      const editarBtn = row.querySelector(".editarBtn");
-      editarBtn.addEventListener("click", () => {
-        // Chamada de função para editar o animal
-        editarAnimal(this);
-      });
-  
-      const excluirBtn = row.querySelector(".excluirBtn");
-      excluirBtn.addEventListener("click", () => {
-        // Chamada de função para excluir o animal
-        excluirAnimal(this);
-      });
-    }
+const pets = [
+  { id: 1, nome: 'Rex', especie: 'Cachorro' },
+  { id: 2, nome: 'Mimi', especie: 'Gato' },
+  { id: 3, nome: 'Bolinha', especie: 'Hamster' }
+];
+
+// Obtém todos os pets
+function getAllPets(req, res) {
+  res.json(pets);
+}
+
+// Obtém um pet pelo ID
+function getPetById(req, res) {
+  const id = parseInt(req.params.id);
+  const pet = pets.find((pet) => pet.id === id);
+
+  if (pet) {
+    res.json(pet);
+  } else {
+    res.status(404).json({ mensagem: 'Pet não encontrado' });
   }
-  
-  // Função para adicionar um novo animal
-  function adicionarAnimal(event) {
-    event.preventDefault();
-  
-    const nomeInput = document.querySelector("#nomeInput");
-    const especieInput = document.querySelector("#especieInput");
-    const idadeInput = document.querySelector("#idadeInput");
-  
-    const nome = nomeInput.value;
-    const especie = especieInput.value;
-    const idade = idadeInput.value;
-  
-    const animal = new Animal(nome, especie, idade);
-  
-  }; 
+}
+
+// Cria um novo pet
+function createPet(req, res) {
+  const { nome, especie } = req.body;
+  const novoPet = { id: pets.length + 1, nome, especie };
+  pets.push(novoPet);
+  res.json(novoPet);
+}
+
+// Atualiza as informações de um pet
+function updatePet(req, res) {
+  const id = parseInt(req.params.id);
+  const { nome, especie } = req.body;
+  const pet = pets.find((pet) => pet.id === id);
+
+  if (pet) {
+    pet.nome = nome;
+    pet.especie = especie;
+    res.json(pet);
+  } else {
+    res.status(404).json({ mensagem: 'Pet não encontrado' });
+  }
+}
+
+// Exclui um pet
+function deletePet(req, res) {
+  const id = parseInt(req.params.id);
+  const index = pets.findIndex((pet) => pet.id === id);
+
+  if (index !== -1) {
+    const petExcluido = pets.splice(index, 1);
+    res.json({ mensagem: `Pet com ID ${id} excluído com sucesso` });
+  } else {
+    res.status(404).json({ mensagem: 'Pet não encontrado' });
+  }
+}
+
+module.exports = {
+  getAllPets,
+}
