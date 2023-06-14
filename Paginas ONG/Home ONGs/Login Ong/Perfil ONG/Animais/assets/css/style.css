@@ -51,6 +51,14 @@ body {
     border-radius: 5px;
     background-color: rgb(42, 93, 248);
 }
+.half-box spacing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+    padding: 1.5rem;
+}
 .corpo button a {
     color: white;
     font-size: large;
