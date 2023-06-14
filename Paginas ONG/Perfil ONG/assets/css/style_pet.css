@@ -1,0 +1,30 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background: rgb(108, 142, 244);
+}
+input {
+    border-radius: 3px;
+    border: 1px;
+    width: 15%;
+    margin-top: 0.5rem;
+}
+label {
+    margin-top: 0.5rem;
+}
+select {
+    margin-top: 0.5rem;
+}
+option {
+    margin-top: 0.5rem;
+}
+@media screen and (max-width: 1330px) {
+   .corpo {
+    overflow-y: scroll;
+   }
+    .box-animal {
+        width: 100%;
+        height: fit-content;
+    }
+    
+}
