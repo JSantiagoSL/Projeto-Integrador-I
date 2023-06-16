@@ -26,37 +26,53 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome-ong">Nome da ONG</label>
-                        <input id="nome-ong" type="text" name="nome-ong" placeholder="Digite o nome da ONG" required>
+                        <input id="nome-ong" type="text" name="nome-ong" placeholder="Digite o nome da ONG" required data-min-length="20">
                     </div>
                     <div class="input-box">
                         <label for="email-ong">E-mail da ONG</label>
-                        <input id="email-ong" type="email" name="email-ong" placeholder="Digite o email" required>
+                        <input id="email-ong" type="email" name="email-ong" placeholder="Digite o email" required data-min-length="26">
                     </div>
                     <div class="input-box">
                         <label for="cnpj-ong">CNPJ</label>
-                        <input id="cnpj-ong" type="text" name="cnpj-ong" placeholder="Digite o CNPJ" required>
+                        <input id="cnpj-ong" type="text" name="cnpj-ong" placeholder="Digite o CNPJ" required data-min-length="6">
                     </div>
                     <div class="input-box">
                         <label for="end-ong">Endereço da ONG</label>
-                        <input id="end-ong" type="text" name="end-ong" placeholder="Digite o Endereço" required>
+                        <input id="end-ong" type="text" name="end-ong" placeholder="Digite o Endereço" required data-min-length="6">
                     </div>
                     <div class="input-box">
                         <label for="senha-ong">Senha</label>
-                        <input id="senha-ong" type="password" name="senha-ong" placeholder="Digite a senha" required>
+                        <input id="senha-ong" type="password" name="senha-ong" placeholder="Digite a senha" required data-min-length="6">
                     </div>
                     <div class="input-box">
                         <label for="senha-ong">Confirme sua senha</label>
-                        <input id="senha-ong" type="password" name="Confirmsenha" placeholder="Digite a senha novamente" required>
+                        <input id="senha-ong" type="password" name="Confirmsenha" placeholder="Digite a senha novamente" required data-min-length="6">
                     </div>                
                 </div>
                 <div class="cadastro-button">
                     <button><a href="#">CADASTRAR</a></buttun>
                 </div>
-            </form>
+            <!-- </form>
+            <table id="TabelaOng">
+                <br><br><br>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>CNPJ</th>
+                    <th>email</th>
+                    <th>senha<th>
+                    <th>endereco<th>
+                    <th>img<th>
+
+                  </tr>
+                </thead> -->
+                <tbody>
+                    <!-- Os animais serão adicionados aqui dinamicamente -->
+                  </tbody>
         </div>
     </div>
 
-
+<script src="JsFormulario/cadastro.js"></script>
 </body>
 
 </html>
