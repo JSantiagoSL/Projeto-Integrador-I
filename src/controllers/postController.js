@@ -1,3 +1,4 @@
+//Arquivo de controlador que contém as funções que lidam com as requisições relacionadas aos posts
 
 const postService = require ('../services/postService');
 const userService = require('../services/userService');

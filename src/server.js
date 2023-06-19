@@ -1,15 +1,27 @@
+//Arquivo de entrada do servidor que inicializa a aplicação Express
+//e define as configurações do servidor:
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
-dotenv.config();
-
-const  app = express;
-
 app.use(cors());
 app.use(express.json());
 
-require ("../src/api/userRoutes");
+dotenv.config();
 
-app.listen(3306);
-console.log("servidor iniciou:");
+// Middleware para analisar o corpo das requisições como JSON
+app.use(express.json());
+
+// Importar rotas
+const postRoutes = require('./postRoutes');
+const userRoutes = require('./userRoutes');
+
+// Rotas
+app.use('/api/posts', postRoutes);
+app.use('/api/users', userRoutes);
+
+// Configurar a porta do servidor
+const port = 3306;
+app.listen(port, () => {
+  console.log(`Servidor ouvindo na porta ${port}`);
+});
