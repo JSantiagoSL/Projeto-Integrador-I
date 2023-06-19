@@ -1,22 +1,15 @@
-const express= require('express');
-const userRoutes = require('./api/userRoutes');
-const postRoutes = require('./api/postRoutes');
-const config = require('./config/default');
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
-const app = express();
+dotenv.config();
 
-app.use(express.json())
-app.use(userRoutes)
-app.use(postRoutes)
+const  app = express;
 
-const PORT = config.server.port
-const HOST = config.server.host
+app.use(cors());
+app.use(express.json());
 
+require ("../src/api/userRoutes");
 
-const server = app.listen(PORT,HOST, (err) => {
-    if (err) {
-        console.log(err);
-        process.exit(1);
-    }
-    console.log(`Server is running on ${HOST}:${server.address().port}`);
-});
+app.listen(3306);
+console.log("servidor iniciou:");

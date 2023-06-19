@@ -9,7 +9,7 @@ async function createUser(req, res) {
             return res.json({
                 success: false,
                 data: {},
-                message: "User with this email already exist",
+                message: "Já existe usuário com este email",
             });
         }
 
@@ -18,7 +18,7 @@ async function createUser(req, res) {
         return res.json({
             success: true,
             data: user,
-            message: "User created successfully",
+            message: "Usuario criado com sucesso",
         });
 
     } catch (error) {
@@ -31,7 +31,7 @@ async function findAllUsers(req, res) {
         return res.json({
             success: true,
             data: users,
-            message: "Users found successfully",
+            message: "Usuários encontrados com sucesso!",
         });
     } catch (error) {
         return res.json({error})
@@ -48,14 +48,14 @@ async function findUser(req, res){
             return res.json({
                     success: false,
                     data: {},
-                    message: "Could not find this user",
+                    message: "Não foi possível localizar este usuário",
             });
         }
 
         return res.json({
             success: true,
             data: user,
-            message: "User found successfully",
+            message: "Usuário encontrado com sucesso!",
         });
     }catch (error) {
         return res.json({error})
@@ -74,7 +74,7 @@ async function updateUser(req, res){
             return res.json({
                 success: false,
                 data: {},
-                message: "Could not update this user",
+                message: "Não foi possível atualizar este usuário",
             });
         }
         user = await userService.updateUser(id, name, email);
@@ -82,7 +82,7 @@ async function updateUser(req, res){
         return res.json({
             success: true,
             data: user,
-            message: "User updated successfully",
+            message: "Usuário atualizado com sucesso!",
         });
 
     }catch (error) {
@@ -99,7 +99,7 @@ async function deleteUser(req, res) {
             return res.json({
                 success: false,
                 data: {},
-                message: "Could not find this user",
+                message: "Não foi possível localizar este usuário",
             });
         }
 
@@ -107,7 +107,7 @@ async function deleteUser(req, res) {
         return res.json({
             success: true,
             data: user,
-            message: "User deleted successfully",
+            message: "Usuário excluído com sucesso!",
         });
     } catch (error) {
         return res.json({ error });

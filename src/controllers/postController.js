@@ -1,5 +1,5 @@
 
-const postService = require('../services/postService');
+const postService = require ('../services/postService');
 const userService = require('../services/userService');
 
 
