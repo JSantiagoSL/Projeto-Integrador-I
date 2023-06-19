@@ -8,8 +8,8 @@ router(app);
 
 app.listen(port, (Error) => {
     if(Error){
-        console.log("deu erro")
+        console.log("deu erro");
         return;
     }
-console.log("servidor rodando")
+console.log("servidor rodando");
 })
