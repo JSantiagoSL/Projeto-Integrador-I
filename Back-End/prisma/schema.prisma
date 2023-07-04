@@ -18,7 +18,7 @@ model adotante {
   pessoas         pessoas                  @relation(fields: [cpf_adot], references: [cpf], onDelete: NoAction, onUpdate: NoAction, map: "cpf_adot")
 }
 
-model animais {
+model animal {
   id_animal   Int             @id @default(autoincrement())
   cnpj_pet    String          @db.VarChar(20)
   especie     animais_especie
