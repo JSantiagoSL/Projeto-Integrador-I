@@ -1,7 +1,8 @@
 //Arquivo de controlador que contém as funções que lidam com as requisições relacionadas aos posts
 
-const postService = require ('../services/postService');
-const userService = require('../services/userService');
+
+const postService = require('../services/postService');
+const userService = require('../services/animalService');
 
 
 async function createPost(req, res) {
@@ -9,9 +10,9 @@ async function createPost(req, res) {
     const { id } = req.params;
 
     try {
-        const user = await userService.findUserById(id);
+        const animal = await animalService.findAnimalById(id);
 
-        if (!user) {
+        if (!animal) {
             return res.json({
                 success: false,
                 data: {},
@@ -19,15 +20,16 @@ async function createPost(req, res) {
             });
         }
 
-        const post = await postService.createPost(content, user);
+        const post = await postService.createPost(content, animal);
 
         return res.json({
             success: true,
             data: post,
             message: "Post created successfully",
         });
+
     } catch (error) {
-        return res.json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 }
 
@@ -42,7 +44,7 @@ async function findAllPosts(req, res) {
         });
 
     } catch (error) {
-        return res.json(error);
+        return res.status(500).json({ message: error.message });
     }
 }
 
@@ -69,13 +71,38 @@ async function updatePost(req, res) {
         });
 
     } catch (error) {
-        return res.json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 }
 
+
+async function deletePost(req, res) {
+    try {
+        const { id } = req.params;
+
+        const post = await postService.findPostById(id);
+        if (!post){
+            return res.json({
+                success: false,
+                data: {},
+                message: "Could not find this user",
+            });
+        }
+
+        await postService.deletePostById(id);
+        return res.json({
+            success: true,
+            data: post,
+            message: "Post deleted successfully",
+        });
+    } catch (error) {
+        return res.json({ error });
+    }
+}
 
 module.exports = {
     createPost,
     findAllPosts,
     updatePost,
+    deletePost
 };

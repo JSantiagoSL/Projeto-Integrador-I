@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 
 
-async function createAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong) {
+async function createAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong, ) {
     const animal = await prisma.animal.create({
         data: {
             id_animal, 

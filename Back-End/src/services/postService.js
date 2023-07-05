@@ -2,11 +2,11 @@ import {PrismaClient} from "@prisma/client";
 const prisma = new PrismaClient();
 
 
-async function createPost(content, user){
+async function createPost(content, animal){
     const post = await prisma.post.create({
         data: {
             content,
-            userId: user.id,
+            animalId: animal.id_animal,
         },
         include: {
             author: true,
@@ -39,6 +39,7 @@ async function updatePost(id, content) {
 
 module.exports = {
     createPost,
+    findPostById,
     findAllPosts,
     updatePost,
 };

@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "3321d2f9-ab56-4bf9-a401-44b1c80d61ac",
+		"name": "API-REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3967472"
+	},
+	"item": [
+		{
+			"name": "animal",
+			"item": [
+				{
+					"name": "CreateAnimal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"teste\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAnimal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"gato\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAnimal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"teste\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"teste\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllAnimais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAnimal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/animal/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAnimalGato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"gato\"\r\n   \"sexo\" : \"macho\",\r\n    \"pelagem\": \"curta\"\r\n   \"cor\" : \"preto\",\r\n    \"deficiencia\": \"não\"\r\n  \"vacinas\" : \"raiva\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"animal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Este post é um test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/post/animal/?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"post",
+								"animal",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
