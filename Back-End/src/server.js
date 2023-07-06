@@ -1,5 +1,6 @@
 const express= require('express');
 const animalRouter = require('./api/animalRouter');
+const ongRouter = require('./api/ongRouter')
 const postRoutes = require('./api/postRoutes');
 const config = require('./config/default');
 
@@ -20,6 +21,7 @@ app.use(morgan('tiny'))
 
 app.use(animalRouter)
 app.use(postRoutes)
+app.use(ongRouter)
 
 
 
