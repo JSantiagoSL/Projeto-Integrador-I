@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_animal\" : \"14\",\r\n    \"especie\": \"teste\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"raw": "{\r\n    \"id_animal\" : \"\",\r\n    \"especie\": \"teste\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -32,5 +32,8 @@
     "vue": "^3.3.4",
     "yarn": "^1.22.19"
   },
-  "repository": "https://github.com/JSantiagoSL/Projeto-Integrador-I.git"
+  "repository": "https://github.com/JSantiagoSL/Projeto-Integrador-I.git",
+  "devDependencies": {
+    "sucrase": "^3.32.0"
+  }
 }

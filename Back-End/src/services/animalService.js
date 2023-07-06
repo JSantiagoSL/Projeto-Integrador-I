@@ -4,15 +4,14 @@ const prisma = new PrismaClient();
 
 
 
-async function createAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong, ) {
-    const animal = await prisma.animal.create({
+async function createAnimal(especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong) {
+    const animais = await prisma.animais.create({
         data: {
-            id_animal, 
             especie, 
             sexo,
             porte, 
             idade, 
-            pelagem, 
+            pelagem,
             cor, 
             deficiencia, 
             vacinas, 
@@ -22,40 +21,40 @@ async function createAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor
         },
     });
 
-    return animal;
+    return animais;
 }
 
 async function findAnimalById(id_animal) {
-    return prisma.animal.findUnique({
+    return prisma.animais.findUnique({
         where: {id: Number(id_animal)}
     });
 }
 
 
-async function findAllAnimais() {
+async function findAllAnimal() {
 
-    const animais = await prisma.animal.findMany();
+    const animais = await prisma.animais.findMany();
     return animais;
 }
 
 async function updateAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong) {
 
-    const animal = await prisma.animal.update({
+    const animais = await prisma.animais.update({
         where: { id: Number(id_animal) },
         data: {id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong}
     });
 
-    return animal;
+    return animais;
 }
 
-async function deleteAnimalById(id_animal) {
+async function deleteanimalById(id_animal) {
 
-    return prisma.animal.delete({where: {id: Number(id_animal)}});
+    return prisma.animais.delete({where: {id: Number(id_animal)}});
 }
 module.exports = {
     createAnimal,
-    findAllAnimais,
-    deleteAnimalById,
+    findAllAnimal,
+    deleteanimalById,
     updateAnimal,
     findAnimalById,
 };

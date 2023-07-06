@@ -1,15 +1,15 @@
-const userService = require('../services/animalService');
+const animalService = require('../services/animalService');
 
 async function createAnimal(req, res) {
-    try {
-        const {id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong} = req.body
-        let animal = await animalService.findUserById(id_animal);
+    // try {
+        const {especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong} = req.body
+        let animal = await animalService.findAnimalById(id_animal);
 
         if (animal) {
             return res.json({
                 success: false,
                 data: {},
-                message: "User with this email already exist",
+                message: "Animal with this id already exist",
             });
         }
 
@@ -17,13 +17,13 @@ async function createAnimal(req, res) {
 
         return res.json({
             success: true,
-            data: user,
-            message: "User created successfully",
+            data: animal,
+            message: "Animal criado com sucesso",
         });
 
-    } catch (error) {
-        return res.json({error})
-    }
+//     } catch (error) {
+//         return res.json({error})
+//     }
 }
 async function findAllAnimais(req, res) {
     try {
@@ -31,7 +31,7 @@ async function findAllAnimais(req, res) {
         return res.json({
             success: true,
             data: animais,
-            message: "animais found successfully",
+            message: "Nao foi possivel criar animal",
         });
     } catch (error) {
         return res.json({error})
@@ -48,7 +48,7 @@ async function findAnimal(req, res){
             return res.json({
                     success: false,
                     data: {},
-                    message: "Could not find this user",
+                    message: "",
             });
         }
 
