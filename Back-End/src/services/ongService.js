@@ -1,4 +1,4 @@
-async function createOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,  ) {
+async function createOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong, ) {
     const animal = await prisma.animal.create({
         data: {
             cnpj, 
