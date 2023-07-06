@@ -1,19 +1,19 @@
-const userService = require('../services/ongService');
+const ongService = require ('../services/ongService');
 
 async function createOng(req, res) {
     try {
-        const {cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,} = req.body
-        let ong = await ongService.findOngByCnpj(cnpj);
+        const {cnpj, email, nome, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,} = req.body
+        let ong = await ongService.findOngById(id);
 
         if (ong) {
             return res.json({
                 success: false,
                 data: {},
-                message: "User with this email already exist",
+                message: "Ong with this email already exist",
             });
         }
 
-        ong = await ongService.createOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,  )
+        ong = await ongService.createOng(cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,  )
 
         return res.json({
             success: true,
@@ -41,8 +41,8 @@ async function findAllOngs(req, res) {
 
 async function findOng(req, res){
     try {
-        const {cnpj} = req.params;
-        const ong = await ongService.findOngByCnpj(cnpj);
+        const {id} = req.params;
+        const ong = await ongService.findOngById(id);
 
         if (!ong){
             return res.json({
@@ -65,19 +65,19 @@ async function findOng(req, res){
 
 async function updateOng(req, res){
     try {
-        const {Cnpj} = req.params;
-        const {cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,} = req.body;
+        const {id} = req.params;
+        const {cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,} = req.body;
 
-        let ong = await ongService.updateOng(cnpj);
+        let ong = await ongService.updateOng(id);
 
-        if (!cnpj){
+        if (!id){
             return res.json({
                 success: false,
                 data: {},
                 message: "Could not update this user",
             });
         }
-        ong = await ongService.updateOng(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong);
+        ong = await ongService.updateOng(cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,);
 
         return res.json({
             success: true,
@@ -92,9 +92,9 @@ async function updateOng(req, res){
 }
 async function deleteOng(req, res) {
     try {
-        const { cnpj } = req.params;
+        const { id } = req.params;
 
-        const ong = await ongService.findOngByCnpj(cnpj);
+        const ong = await ongService.findOngById(id);
         if (!ong){
             return res.json({
                 success: false,
@@ -103,10 +103,10 @@ async function deleteOng(req, res) {
             });
         }
 
-        await ongService.deleteOngByCnpj(cnpj);
+        await ongService.deleteOngByid(id);
         return res.json({
             success: true,
-            data: cnpj,
+            data: id,
             message: "ong deleted successfully",
         });
     } catch (error) {
