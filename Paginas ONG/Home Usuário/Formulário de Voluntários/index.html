@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Voluntariar-se    </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/Voluntariar.jpg">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Seja Voluntário</h1>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="end">Endereço</label>
+                        <input id="end" type="text" name="end" placeholder="Digite o Endereço" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="telefone">Telefone</label>
+                        <input id="senha" type="tel" name="senha" placeholder="(xx) x xxxx-xxxx" required>
+                    </div>
+                    
+                </div>
+                <div class="dados-title">
+                    <h4>Dados Adicionais</h4>
+                </div>
+                <div class="dados-adc">                    
+                    <div class="transporte">
+                        <label for="transp">Possui Transporte:</label><br>
+                        <input type="radio" name="transp" id="sim"> Sim
+                        <input type="radio" name="transp" id="nao"> Não
+                    </div>
+                </div>
+                <div class="dados-adc">                    
+                    <div class="funcao">
+                        <label for="func">Função:</label>
+                        <select name="func" id="func">
+                            <option></option>
+                            <option>Limpeza</option>
+                            <option>Coleta de doações</option>
+                            <option>Ajuda com os cuidados</option>
+                        </select>
+                    </div>
+                    <div class="disp">
+                        <label for="disp">Disponibilidade:</label>
+                        <select name="disp" id="func">
+                            <option></option>
+                            <option>Manhã</option>
+                            <option>Tarde</option>
+                            <option>Ajuda com os cuidados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cadastro-button">
+                    <button><a href="#">Enviar Formulário</a></buttun>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
