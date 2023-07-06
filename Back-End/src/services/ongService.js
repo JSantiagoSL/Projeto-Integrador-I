@@ -1,7 +1,8 @@
-async function createOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong, ) {
-    const animal = await prisma.animal.create({
+async function createOng(cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong, ) {
+    const ong = await prisma.ong.create({
         data: {
-            cnpj, 
+            cnpj,
+            nome,
             email, 
             senha, 
             facebook, 
@@ -17,9 +18,9 @@ async function createOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, 
     return ong;
 }
 
-async function findOngByCnpj(cnpj) {
+async function findOngById(id) {
     return prisma.ong.findUnique({
-        where: {id: Number(cnpj)}
+        where: {id: Number(id)}
     });
 }
 
@@ -30,24 +31,24 @@ async function findAllOngs() {
     return ongs;
 }
 
-async function updateOng(cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,) {
+async function updateOng(cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,) {
 
     const ong = await prisma.ong.update({
-        where: { id: Number(cnpj) },
-        data: {cnpj, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,}
+        where: { id: Number(id) },
+        data: {cnpj, nome, email, senha, facebook, whatsaap, descricao_ong, conta_banco_ong, endereco_ong,}
     });
 
     return ong;
 }
 
-async function deleteOngByCnpj(cnpj) {
+async function deleteOngById(id) {
 
-    return prisma.ong.delete({where: {id: Number(cnpj)}});
+    return prisma.ong.delete({where: {id: Number(id)}});
 }
 module.exports = {
     createOng,
     findAllOngs,
-    deleteOngByCnpj,
+    deleteOngById,
     updateOng,
-    findOngByCnpj,
+    findOngById,
 };
