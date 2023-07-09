@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "3321d2f9-ab56-4bf9-a401-44b1c80d61ac",
-		"name": "API-REST",
+		"name": "API-Projeto",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3967472"
 	},
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_animal\" : \"14\",\r\n    \"especie\": \"teste\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"raw": "{  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"gato\"\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\"\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\"\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\"\r\n  }",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"gato\",\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\",\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\",\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\",\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -73,7 +73,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -141,7 +141,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"

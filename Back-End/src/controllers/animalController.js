@@ -1,4 +1,4 @@
-const userService = require('../services/animalService');
+const animalService = require('../services/animalService');
 
 async function createAnimal(req, res) {
     try {
