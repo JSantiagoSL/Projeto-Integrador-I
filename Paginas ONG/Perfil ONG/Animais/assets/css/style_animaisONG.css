@@ -1,0 +1,123 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background: rgb(108, 142, 244);
+}
+.paginas {
+    width: 100%;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0%;
+}
+.paginas button {
+    border: none;
+    padding: 0.2rem 0.5rem;
+    background-color: rgb(42, 93, 248);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.paginas button a {
+    text-decoration: none;
+    font-weight: 500    ;
+    color: white;
+
+}
+.corpo {
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0%;
+
+}
+.corpo-header {
+    width: 90%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 1rem;
+}
+.button-adicionar button {
+    height: 2rem;
+    width: 10rem;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(42, 93, 248);
+}
+.half-box spacing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+    padding: 1.5rem;
+}
+.corpo button a {
+    color: white;
+    font-size: large;
+    font-weight: 200;
+    text-decoration: none;
+}
+.animais-slv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+    padding: 1.5rem;
+}
+.box-animal {
+    background-color: lightgray;
+    display: flex;
+    width: 40%;
+    height: 35vh;
+    padding: 1rem;
+    
+}
+.lado-esq {
+    display: grid;
+    width: 30%;
+    padding: 0.5rem;
+}
+.lado-esq input {
+    margin-top: 1.5rem;
+    background-color: rgb(42, 93, 248);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+}
+.lado-dir {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+}
+.lado-dir label {
+    padding: 0.2rem;
+    font-size: smaller;
+}
+.lado-dir input {
+    padding: 0.2rem;
+}
+
+@media screen and (max-width: 1330px) {
+   .corpo {
+    overflow-y: scroll;
+   }
+    .box-animal {
+        width: 100%;
+        height: fit-content;
+    }
+    
+}

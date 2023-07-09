@@ -1,0 +1,43 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background: rgb(108, 142, 244);
+}
+input {
+    border-radius: 3px;
+    border: 1px;
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 1px 1px rgba(101, 101, 101, 0.499);
+}
+label {
+    margin-top: 0.5rem;
+}
+select {
+    margin-top: 0.5rem;
+}
+option {
+    margin-top: 0.5rem;
+
+}
+#btn-submit {
+    margin-top: 1.2rem;
+    width: 30%;
+    color: white;
+    background-color: rgb(42, 93, 248);
+}
+#box-form {
+    background-color: white;
+    width: 30%;
+}
+@media screen and (max-width: 1330px) {
+   .corpo {
+    overflow-y: scroll;
+   }
+    .box-animal {
+        width: 100%;
+        height: fit-content;
+    }
+    
+}

@@ -1,0 +1,55 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background: rgb(108, 142, 244);
+}
+
+.box-animal {
+    margin-top: 25vh;
+    background-color: lightgray;
+    display: flex;
+    width: 50%;
+    height: 40vh;
+    padding: 1rem;
+    
+}
+.lado-esq {
+    display: grid;
+    width: 30%;
+    padding: 0.5rem;
+}
+.lado-esq input {
+    margin-top: 1.5rem;
+    background-color: rgb(42, 93, 248);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+}
+.lado-dir {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+}
+.lado-dir label {
+    padding: 0.2rem;
+    font-size: smaller;
+}
+.lado-dir input {
+    padding: 0.2rem;
+}
+
+@media screen and (max-width: 1330px) {
+   .corpo {
+    overflow-y: scroll;
+   }
+    .box-animal {
+        width: 100%;
+        height: fit-content;
+    }
+    
+}
