@@ -1,50 +1,37 @@
-const userService = require('../services/userService');
+const adotanteService = require('../services/adotanteService');
 
-async function createUser(req, res) {
+async function createAdotante(req, res) {
     try {
-        const {name, email} = req.body
-        let user = await userService.findUserByEmail(email);
+        const {nome, cpf, email, telefone, endereco_pessoas, rendafixa, aceitacaoAnimal, animaisAtuais, animaisAntigos, descMoradores, motivacao  } = req.body
+        let adotante = await adotanteService.findAdotanteById(cpf_adot);
 
-        if (user) {
+        if (adotante) {
             return res.json({
                 success: false,
                 data: {},
-                message: "User with this email already exist",
+                message: "",
             });
         }
 
-        user = await userService.createUser(name, email)
+        adotante = await adotanteService.createAdotante(nome, cpf, email, telefone, endereco_pessoas, rendafixa, aceitacaoAnimal, animaisAtuais, animaisAntigos, descMoradores, motivacao  )
 
         return res.json({
             success: true,
-            data: user,
-            message: "User created successfully",
+            data: adotante,
+            message: "",
         });
 
     } catch (error) {
         return res.json({error})
     }
 }
-async function findAllUsers(req, res) {
+// encontrar um adotante
+async function findAdotante(req, res){
     try {
-        const users = await userService.findAllUsers();
-        return res.json({
-            success: true,
-            data: users,
-            message: "Users found successfully",
-        });
-    } catch (error) {
-        return res.json({error})
+        const {cpf_adot} = req.params;
+        const adotante = await adotanteService.findAdotanteById(cpf_adot); // lembrar qual a chave de adotante
 
-    }
-}
-
-async function findUser(req, res){
-    try {
-        const {id} = req.params;
-        const user = await userService.findUserById(id);
-
-        if (!user){
+        if (!adotante){
             return res.json({
                     success: false,
                     data: {},
@@ -54,8 +41,8 @@ async function findUser(req, res){
 
         return res.json({
             success: true,
-            data: user,
-            message: "User found successfully",
+            data: adotante,
+            message: "adotante encontrado com sucesso",
         });
     }catch (error) {
         return res.json({error})
@@ -63,51 +50,24 @@ async function findUser(req, res){
     }
 }
 
-async function updateUser(req, res){
+async function deleteAdotante(req, res) {
     try {
-        const {id} = req.params;
-        const {name, email} = req.body;
+        const { cpf_adot } = req.params;
 
-        let user = await userService.updateUser(id);
-
-        if (!user){
+        const adotante = await adotanteService.findAdotanteById(cpf_adot);
+        if (!adotante){
             return res.json({
                 success: false,
                 data: {},
-                message: "Could not update this user",
-            });
-        }
-        user = await userService.updateUser(id, name, email);
-
-        return res.json({
-            success: true,
-            data: user,
-            message: "User updated successfully",
-        });
-
-    }catch (error) {
-        return res.json({error})
-
-    }
-}
-async function deleteUser(req, res) {
-    try {
-        const { id } = req.params;
-
-        const user = await userService.findUserById(id);
-        if (!user){
-            return res.json({
-                success: false,
-                data: {},
-                message: "Could not find this user",
+                message: "",
             });
         }
 
-        await userService.deleteUserById(id);
+        await adotanteService.deleteAdotanteById(cpf_adot);
         return res.json({
             success: true,
-            data: user,
-            message: "User deleted successfully",
+            data: adotante,
+            message: "",
         });
     } catch (error) {
         return res.json({ error });
@@ -115,9 +75,7 @@ async function deleteUser(req, res) {
 }
 
 module.exports = {
-    createUser,
-    findAllUsers,
-    findUser,
-    updateUser,
-    deleteUser,
+    createAdotante,
+    findAdotante,
+    deleteAdotante,
 };
