@@ -1,7 +1,7 @@
 const animalService = require('../services/animalService');
 
 async function createAnimal(req, res) {
-    // try {
+    try {
         const {especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong} = req.body
         let animal = await animalService.findAnimalById(id_animal);
 
@@ -12,6 +12,7 @@ async function createAnimal(req, res) {
                 message: "Animal with this id already exist",
             });
         }
+    
 
         animal = await animalService.createAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor, deficiencia, vacinas, descricao, ong)
 
@@ -21,9 +22,9 @@ async function createAnimal(req, res) {
             message: "Animal criado com sucesso",
         });
 
-//     } catch (error) {
-//         return res.json({error})
-//     }
+    } catch (error) {
+        return res.json({error})
+   }
 }
 async function findAllAnimais(req, res) {
     try {

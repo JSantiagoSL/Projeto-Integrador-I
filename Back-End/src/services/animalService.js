@@ -47,14 +47,14 @@ async function updateAnimal(id_animal, especie, sexo, porte, idade, pelagem, cor
     return animais;
 }
 
-async function deleteanimalById(id_animal) {
+async function deleteAnimalById(id_animal) {
 
     return prisma.animais.delete({where: {id: Number(id_animal)}});
 }
 module.exports = {
     createAnimal,
     findAllAnimal,
-    deleteanimalById,
+    deleteAnimalById,
     updateAnimal,
     findAnimalById,
 };
