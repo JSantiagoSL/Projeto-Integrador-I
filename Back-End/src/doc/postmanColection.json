@@ -332,6 +332,265 @@
 
 
 
+
+
+
+
+
+
+		{
+			"name": "Adotante",
+			"item": [
+				{
+					"name": "CreateAdotante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante"
+							]
+						}
+					},
+					"response": []
+				},
+				
+				{
+					"name": "FindAdotante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/adotante/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+
+				{
+					"name": "DeleteAdotante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_adot\": \"teste\",\r\n \"telefone\" : \"and\",\r\n  \"endereco_pessoas\" : \"and\",\r\n   \"email\" : \"teste\",\r\n    \"rendafixa\": \"teste\",\r\n   \"aceitacaoAnimal\" : \"teste\",\r\n    \"animaisAtuais\": \"teste\",\r\n  \"animaisAntigos\" : \"teste\",\r\n    \"descMoradores\": \"teste\",\r\n \"motivacao\": \"teste\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				
+
+				{
+					"name": "CreateAdotanteTeste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+
+
+
+
+
+
+
+
+
+
+		{
+			"name": "voluntario",
+			"item": [
+				{
+					"name": "Createvoluntario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/voluntario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario"
+							]
+						}
+					},
+					"response": []
+				},
+				
+				{
+					"name": "FindVoluntario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/voluntario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+
+				{
+					"name": "DeleteVoluntario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_vol\": \"teste\",\r\n   \"telefone\" : \"and\",\r\n   \"endereco_pessoas\" : \"and\",\r\n   \"disponibilidade\" : \"and\",\r\n   \"transporte\" : \"teste\",\r\n    \"funcao\": \"teste\",\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				
+
+				{
+					"name": "CreateVoluntarioTeste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_vol\": \"teste\",\r\n   \"telefone\" : \"and\",\r\n   \"endereco_pessoas\" : \"and\",\r\n   \"disponibilidade\" : \"and\",\r\n   \"transporte\" : \"teste\",\r\n    \"funcao\": \"teste\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 		{
 			"name": "Post",
@@ -360,12 +619,15 @@
 							"path": [
 								"post",
 								"animal",
+								"ong",
+								"adotante",
+								"voluntario",
 								""
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "3"
+									"value": "1"
 								}
 							]
 						}

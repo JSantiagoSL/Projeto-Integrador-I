@@ -9,7 +9,7 @@ async function createOng(req, res) {
             return res.json({
                 success: false,
                 data: {},
-                message: "Ong with this email already exist",
+                message: "Ong com esse CNPJ já existe",
             });
         }
 
