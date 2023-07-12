@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:root@localhost:3306/projintegrador"
+  url      = "mysql://root:nova_senha@localhost:3306/projintegrador"
 }
 
 model adotante {
