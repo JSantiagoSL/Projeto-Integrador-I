@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-vue": "^2.23.1",
+    "express": "^4.18.2",
+    "jsconfig": "^0.2.0",
+    "vue": "^2.7.14"
+  },
+  "name": "front-end",
+  "description": "```\r npm install\r ```",
+  "version": "1.0.0",
+  "main": "babel.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

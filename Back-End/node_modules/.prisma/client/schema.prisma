@@ -1,0 +1,152 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:nova_senha@localhost:3306/projintegrador"
+}
+
+model adotante {
+  cpf_adot        String                   @id @db.VarChar(11)
+  rendafixa       adotante_rendafixa
+  aceitacaoAnimal adotante_aceitacaoAnimal
+  animaisAtuais   String                   @db.VarChar(45)
+  animaisAntigos  String                   @db.VarChar(100)
+  descMoradores   String                   @db.VarChar(255)
+  motivacao       String                   @db.VarChar(255)
+  pessoas         pessoas                  @relation(fields: [cpf_adot], references: [cpf], onDelete: NoAction, onUpdate: NoAction, map: "cpf_adot")
+}
+
+model animais {
+  id_animal   Int             @id @default(autoincrement())
+  cnpj_pet    String          @db.VarChar(20)
+  especie     animais_especie
+  sexo        animais_sexo
+  porte       animais_porte
+  idade       animais_idade
+  pelagem     animais_pelagem
+  cor         String          @db.VarChar(45)
+  deficiencia String?         @db.VarChar(45)
+  vacinas     String          @db.VarChar(100)
+  descricao   String?         @db.VarChar(45)
+  foto        Bytes           @db.TinyBlob
+  ong         ong             @relation(fields: [cnpj_pet], references: [cnpj], onDelete: NoAction, onUpdate: NoAction, map: "cnpj_pet")
+
+  @@index([cnpj_pet], map: "cnpj_idx")
+}
+
+model conta_banco_ong {
+  cnpj     String  @id @db.VarChar(20)
+  numConta String  @db.VarChar(30)
+  agencia  String  @db.VarChar(6)
+  operacao String? @db.VarChar(4)
+  pix      String  @db.VarChar(32)
+  qrcode   Bytes?  @db.TinyBlob
+  ong      ong     @relation(fields: [cnpj], references: [cnpj], onDelete: NoAction, onUpdate: NoAction, map: "cnpj")
+}
+
+model endereco_ong {
+  cnpj_end String @id @db.VarChar(20)
+  cep      String @db.VarChar(9)
+  cidade   String @db.VarChar(30)
+  bairro   String @db.VarChar(50)
+  rua      String @db.VarChar(50)
+  numero   String @db.VarChar(5)
+  ong      ong    @relation(fields: [cnpj_end], references: [cnpj], onDelete: NoAction, onUpdate: NoAction, map: "cnpj_end")
+}
+
+model endereco_pessoas {
+  cpf_end     String  @id @db.VarChar(11)
+  cidade      String  @db.VarChar(30)
+  bairro      String  @db.VarChar(50)
+  rua         String  @db.VarChar(50)
+  numero      String  @db.VarChar(5)
+  tipoMoradia String  @db.VarChar(255)
+  pessoas     pessoas @relation(fields: [cpf_end], references: [cpf], onDelete: NoAction, onUpdate: NoAction, map: "cpf_end")
+}
+
+model ong {
+  cnpj            String           @id @db.VarChar(20)
+  nome            String           @db.VarChar(45)
+  email           String           @db.VarChar(100)
+  senha           String           @db.VarChar(20)
+  facebook        String?          @db.VarChar(200)
+  whatsapp        String?          @db.VarChar(15)
+  descricao_ong   String           @db.LongText
+  foto            Bytes            @db.TinyBlob
+  animais         animais[]
+  conta_banco_ong conta_banco_ong?
+  endereco_ong    endereco_ong?
+}
+
+model pessoas {
+  cpf              String            @id @db.VarChar(11)
+  nome             String            @db.VarChar(255)
+  email            String            @db.VarChar(100)
+  telefone         String            @db.VarChar(15)
+  adotante         adotante?
+  endereco_pessoas endereco_pessoas?
+  voluntarios      voluntarios?
+}
+
+model voluntarios {
+  cpf_vol         String                      @id @db.VarChar(11)
+  disponibilidade voluntarios_disponibilidade
+  transporte      voluntarios_transporte
+  funcao          voluntarios_funcao
+  pessoas         pessoas                     @relation(fields: [cpf_vol], references: [cpf], onDelete: NoAction, onUpdate: NoAction, map: "cpf_vol")
+}
+
+enum adotante_rendafixa {
+  Sim
+  N_o @map("Não")
+}
+
+enum voluntarios_disponibilidade {
+  Manh_ @map("Manhã")
+  Tarde
+}
+
+enum adotante_aceitacaoAnimal {
+  Sim
+  N_o @map("Não")
+}
+
+enum animais_especie {
+  gato
+  cachorro
+}
+
+enum voluntarios_transporte {
+  Sim
+  N_o @map("Não")
+}
+
+enum animais_sexo {
+  F
+  M
+}
+
+enum voluntarios_funcao {
+  Limpeza
+  coleta
+  ajuda
+}
+
+enum animais_porte {
+  P
+  M
+  G
+}
+
+enum animais_idade {
+  Filhote
+  Adulto
+  Idoso
+}
+
+enum animais_pelagem {
+  Curto
+  Longo
+}

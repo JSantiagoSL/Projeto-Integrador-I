@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="assets/css/style_perfilOng.css">
+</head>
+<head>
+    <div class="paginas">
+        <button><a href="pgAnimaisOng.html">Animais</a></button>
+        <button><a href="pgPerfilOng.html">Perfil ONG</a></button>
+        <button><a href="/Projeto-Integrador-I/Paginas ONG/pgInicial.html">Sair</a></button>
+    </div>
+</head>
+<body>
+    <header id="header_corpo">
+        <center>
+            <br>
+            <img id="logo_ong" src="https://scontent.frec10-1.fna.fbcdn.net/v/t39.30808-6/306353297_435043115398212_502758597421731368_n.jpg?_nc_cat=108&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEBwDrfVNDh4OLELg4_oXwbMRK_uPbHACExEr-49scAIWvKfg6i6rfouwooXKuHBckajTWn66Qw_VJGzcZoMqbz&_nc_ohc=CqR5D_TNqD4AX-Ryzls&_nc_pt=1&_nc_ht=scontent.frec10-1.fna&oh=00_AfC5mrSW6Ogk8kPprhWPICyEM_VBD768cc49AgzDBNLPdQ&oe=648FCA20" width="150"><br>
+            <label for="logo_ong">Nome da ong</label>
+        </center>          
+    </header>
+    <section id="corpo">
+        <div id="links_ong">
+            <center>
+                <h5>Links e Dados da ONG</h5>
+            </center>
+            
+            <label for="facebook">Facebook</label><br>
+            <input type="url" name="facebook" id="facebook" placeholder=" Link do Facebook da ong"><br>
+            <label for="instagram">Instagram</label><br>
+            <input type="url" name="instagram" id="instagram" placeholder=" Link do Instagram da ong"><br>
+            <label for="whatsapp">Whatsapp</label><br>
+            <input type="url" name="whatsapp" id="whatsapp" placeholder=" Link do Whatsapp da ong"><br>
+            <label for="quem_somos">Quem somos</label><br>
+            <input type="text" name="quem_somos" id="quem_somos" placeholder=" Resumo dos Membros da ONG"><br>
+            <label for="infos_bancarias">Informações Bancarias</label><br>
+            <input type="text" name="infos_bancarias" id="infos_bancarias" placeholder=" Conta, Agência, Operação"><br>
+            <label for="chave_pix">Chave Pix</label><br>
+            <input type="text" name="chave_pix" id="chave_pix" placeholder=" Chave Pix da ONG"><br>
+            <label for="qr_code">QR Code do Pix</label><br>
+            <input type="file" name="qr_code" id="qr_code" accept="image/*">
+        </div>
+        <div id="imgs_carousel">
+            <center>
+                <h5>Carousel</h4>    
+            </center>
+            
+            <label for="add_img">Adicionar Imagens</label><br>
+            <input type="file" name="add_img" id="add_img">
+        </div>
+      
+    </section>   
+    <footer id="footer">
+        <center>
+            <br>
+            <button type="submit"><a href="pgPerfilOng.html">Salvar Alterações</a></button>
+        </center>
+    </footer>  
+</body>

@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "3321d2f9-ab56-4bf9-a401-44b1c80d61ac",
+		"name": "API-Projeto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3967472"
+	},
+	"item": [
+		{
+			"name": "animal",
+			"item": [
+				{
+					"name": "CreateAnimal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAnimal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_animal\" : \"and\",\r\n    \"especie\": \"gato\",\r\n   \"sexo\" : \"teste\",\r\n    \"pelagem\": \"teste\",\r\n   \"cor\" : \"teste\",\r\n    \"deficiencia\": \"teste\",\r\n  \"vacinas\" : \"teste\",\r\n    \"descricao\": \"notacao\",\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAnimal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllAnimais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/animais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAnimal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/animal/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAnimalGato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"animal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+
+
+
+
+
+
+		{
+			"name": "Ong",
+			"item": [
+				{
+					"name": "CreateOng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/ong",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOng",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/ong/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ong",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOng",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/animal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ong",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllOngs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/ongs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ongs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindOng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/ong/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ong",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateOngAnjosProtetores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\"\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\"\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\"\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/ong",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"ong"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+
+
+
+
+
+
+
+
+
+		{
+			"name": "Adotante",
+			"item": [
+				{
+					"name": "CreateAdotante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante"
+							]
+						}
+					},
+					"response": []
+				},
+				
+				{
+					"name": "FindAdotante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/adotante/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+
+				{
+					"name": "DeleteAdotante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_adot\": \"teste\",\r\n \"telefone\" : \"and\",\r\n  \"endereco_pessoas\" : \"and\",\r\n   \"email\" : \"teste\",\r\n    \"rendafixa\": \"teste\",\r\n   \"aceitacaoAnimal\" : \"teste\",\r\n    \"animaisAtuais\": \"teste\",\r\n  \"animaisAntigos\" : \"teste\",\r\n    \"descMoradores\": \"teste\",\r\n \"motivacao\": \"teste\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				
+
+				{
+					"name": "CreateAdotanteTeste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\" : \"and\",\r\n    \"nome\": \"teste\",\r\n   \"email\" : \"senha\",\r\n    \"facebook\": \"teste\",\r\n   \"Whatsapp\" : \"teste\",\r\n    \"descricao_ong\": \"teste\",\r\n  \"conta_banco_ong\" : \"teste\",\r\n    \"endereco_ong\": \"teste\",\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"adotante"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+
+
+
+
+
+
+
+
+
+
+		{
+			"name": "voluntario",
+			"item": [
+				{
+					"name": "Createvoluntario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/voluntario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario"
+							]
+						}
+					},
+					"response": []
+				},
+				
+				{
+					"name": "FindVoluntario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/voluntario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+
+				{
+					"name": "DeleteVoluntario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_vol\": \"teste\",\r\n   \"telefone\" : \"and\",\r\n   \"endereco_pessoas\" : \"and\",\r\n   \"disponibilidade\" : \"and\",\r\n   \"transporte\" : \"teste\",\r\n    \"funcao\": \"teste\",\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				
+
+				{
+					"name": "CreateVoluntarioTeste",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\" : \"and\",\r\n    \"cpf_vol\": \"teste\",\r\n   \"telefone\" : \"and\",\r\n   \"endereco_pessoas\" : \"and\",\r\n   \"disponibilidade\" : \"and\",\r\n   \"transporte\" : \"teste\",\r\n    \"funcao\": \"teste\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/adotante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"voluntario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Este post é um test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/post/animal/?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"post",
+								"animal",
+								"ong",
+								"adotante",
+								"voluntario",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
