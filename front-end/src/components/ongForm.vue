@@ -1,7 +1,7 @@
 <template>
-    <Message :msg="msg" v-show="msg" />
+    <Message :msg="msg" v-show="msg">
     <div>
-      <form id="Ong-form" method="POST" @submit="createOng">
+      <form id="Ong-form" method="POST" @submit="cadastrarOng">
         <div class="input-container">
           <label for="nome">Nome da Ong:</label>
           <input type="text" id="nomeOng" name="nomeOng" v-model="nome" placeholder="Digite o nome da Ong">
@@ -28,10 +28,13 @@
         </div>
         <div class="input-container">
           <label for="senha">senha</label>
-          <input type="passaword" id="senhaOng" name="senhaOng" v-model="senha" placeholder="Digite uma senha segura">
+          <input type="password" id="senhaOng" name="senhaOng" v-model="ong.content" placeholder="Digite uma senha segura">
         </div>
+
+
       </form>
     </div>
+  </Message>
   </template>
 
 
@@ -43,14 +46,14 @@ export default {
   name: 'Ong',
   data(){
     return{
-      cadastro_Ong: [],
+      ongs: {},
       Ong: {
         nome:'',
         cnpj:'',
         email:'', 
         endereco:'',
         facebook:'', 
-        whatsaap:'', 
+        whatsapp:'', 
         descricao_ong:'', 
         senha:''
       },
@@ -88,7 +91,7 @@ export default {
             })
             .then(res => res.json())
         alert('Dados atualizados com sucesso!')
-        this.obterArtigos()
+        this.obterOng()
         this.ong.id = ''
         this.ong.content = ''
       }
@@ -99,13 +102,13 @@ export default {
             .then(res => res.json())
             .catch(err => console.log(err))
             alert('Deletado com sucesso!')
-        this.obterOngs()
+        this.obterOng()
       }
     },
 
     editarOng(ong){
       this.editar = true
-      this.ong.id = ong.id
+      this.Ong.cnpj = ong.cnpj
       this.ong.content = ong.content
 
     }
