@@ -2,19 +2,19 @@
     <div>
       <Banner />
       <div class="main-container">
-        <h1>Cadastre sua Ong</h1>
-        <ongForm />
+        <h1>Cadastrar Animal</h1>
+        <FormPet />
       </div>
     </div>
   </template>
   
   <script>
-  import ongForm from '../components/ongForm'
+  import FormPet from '../components/FormPet'
   
   export default {
-    name: 'Home',
+    name: 'Pet',
     components: {
-      ongForm
+      FormPet
     }
   }
   </script>

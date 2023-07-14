@@ -4,8 +4,8 @@
         <router-link id="logo-url" to="/">
           <img id="logo" :src="logo" :alt="alt">
         </router-link>
-        <router-link to="/">Cadastre sua Ong</router-link>
-        <router-link to="/pedidos">Login</router-link>
+        <router-link to="/">Cadastrar Pet</router-link>
+        <router-link to="/pedidos">Pets</router-link>
       </div>
     </div>
   </template>
@@ -20,8 +20,8 @@
   
   <style scoped>
     #nav {
-      background-color: #06a9f5;
-      border-bottom: 4px solid #ffffff;
+      background-color: #0044b3;   /*azul*/
+      border-bottom: 4px solid #111; /*preto*/
       padding: 15px 50px;
       display: flex;
       justify-content: flex-end;
@@ -39,13 +39,13 @@
     }
   
     #nav a {
-      color: #03d7fc;
+      color: #0b0c0f;  /*preto*/
       text-decoration: none;
       margin: 12px;
       transition: .5s;
     }
   
     #nav a:hover {
-      color: #FFF;
+      color: #FFF;  /*branco*/
     }
   </style>
